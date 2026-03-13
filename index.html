@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>今日世界大新闻 | 2026-03-12</title>
+  <meta name="description" content="2026 年 3 月 12 日世界大新闻速览：伊朗战争、全球油价、乌克兰无人机协议、中国两会与智利政局。">
+  <style>
+    :root {
+      --bg: #08121c;
+      --bg-soft: rgba(11, 25, 39, 0.76);
+      --panel: rgba(16, 29, 45, 0.88);
+      --panel-alt: rgba(12, 22, 35, 0.88);
+      --line: rgba(255, 255, 255, 0.08);
+      --text: #eef2eb;
+      --muted: #aab6c2;
+      --gold: #e1b063;
+      --teal: #53b4a5;
+      --coral: #f27d62;
+      --blue: #6f9dff;
+      --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      font-family: "Avenir Next", "PingFang SC", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(83, 180, 165, 0.18), transparent 28%),
+        radial-gradient(circle at top right, rgba(225, 176, 99, 0.16), transparent 24%),
+        linear-gradient(180deg, #09131f 0%, #050b12 100%);
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 94%);
+      pointer-events: none;
+      opacity: 0.55;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .shell {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.04);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .hero-card,
+    .note-card,
+    .stat-card,
+    .story-card,
+    .source-card {
+      background: var(--bg-soft);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
+    }
+
+    .hero-card {
+      padding: 38px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -120px;
+      top: -90px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(225, 176, 99, 0.22), transparent 65%);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(83, 180, 165, 0.12);
+      border: 1px solid rgba(83, 180, 165, 0.24);
+      color: #b7eee2;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      font-family: "Iowan Old Style", "Songti SC", "Noto Serif SC", "Times New Roman", serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+    }
+
+    h1 {
+      margin-top: 18px;
+      font-size: clamp(2.6rem, 5.7vw, 5.4rem);
+      line-height: 0.95;
+      max-width: 9ch;
+    }
+
+    .hero-copy {
+      margin-top: 20px;
+      max-width: 60ch;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .hero-footer {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .chip {
+      padding: 10px 12px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .note-card {
+      padding: 28px;
+      display: grid;
+      align-content: start;
+      gap: 18px;
+      background: linear-gradient(180deg, rgba(17, 31, 46, 0.94), rgba(9, 17, 28, 0.94));
+    }
+
+    .note-kicker {
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.78rem;
+    }
+
+    .note-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .stat-card {
+      padding: 22px;
+      background: var(--panel-alt);
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .stat-value {
+      margin-top: 10px;
+      font-size: clamp(1.65rem, 2vw, 2.3rem);
+      font-weight: 650;
+      line-height: 1.1;
+    }
+
+    .stat-desc {
+      margin-top: 10px;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.96rem;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 16px;
+      margin: 34px 0 18px;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 54ch;
+    }
+
+    .stories {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .story-card {
+      padding: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent-color), transparent 88%);
+    }
+
+    .story-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+
+    .region {
+      color: var(--accent-color);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+    }
+
+    .timing {
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .story-card h3 {
+      font-size: 1.5rem;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .story-card p {
+      margin: 0 0 14px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .impact {
+      padding: 14px 16px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      background: rgba(255, 255, 255, 0.03);
+      color: #dce5eb;
+      line-height: 1.7;
+    }
+
+    .story-footer {
+      margin-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.05);
+      text-decoration: none;
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .source-link:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.22);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .sources {
+      display: grid;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .source-card {
+      padding: 18px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      transition: border-color 180ms ease, transform 180ms ease;
+    }
+
+    .source-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .source-card strong {
+      display: block;
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+
+    .source-card span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.94rem;
+    }
+
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .rise {
+      animation: rise 720ms ease both;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .stories {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-card,
+      .note-card {
+        padding: 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        width: min(100vw - 20px, 1180px);
+        padding-top: 18px;
+      }
+
+      .topbar,
+      .section-head,
+      .story-footer,
+      .source-card {
+        display: block;
+      }
+
+      .topbar > * + *,
+      .section-head > * + *,
+      .story-footer > * + *,
+      .source-card > * + * {
+        margin-top: 10px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .story-card,
+      .stat-card,
+      .source-card {
+        border-radius: 24px;
+      }
+
+      h1 {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="shell">
+    <div class="topbar rise">
+      <div class="pill">World News Desk</div>
+      <div>整理时间：2026 年 3 月 12 日 19:15 PDT 之后</div>
+    </div>
+
+    <section class="hero">
+      <article class="hero-card rise">
+        <div class="eyebrow">March 12, 2026 / 今日世界大新闻</div>
+        <h1>风暴还在扩散，世界已经改写。</h1>
+        <p class="hero-copy">
+          今天的世界新闻几乎都绕不开同一条主线：伊朗战争正在从战场本身外溢到能源、金融、盟友关系和其他冲突前线。与此同时，
+          中国继续把重心压在科技与长期规划上，乌克兰借势推动无人机合作，拉美则出现重要政治右转。
+        </p>
+        <div class="hero-footer">
+          <span class="chip">6 条核心新闻</span>
+          <span class="chip">覆盖中东、欧洲、东亚、拉美</span>
+          <span class="chip">来源以 AP 当日报道为主</span>
+        </div>
+      </article>
+
+      <aside class="note-card rise" style="animation-delay: 120ms;">
+        <div class="note-kicker">今日判断</div>
+        <h2>战争不只是在打仗，而是在重排全球成本。</h2>
+        <p>油价回到每桶 100 美元、乌克兰重新强调低成本防空、中国继续强化技术主权，这些并不是孤立消息，而是同一轮全球再定价的不同截面。</p>
+        <p>如果只看单条 headline，会觉得今天很乱；把它们放在一起看，就会发现关键词其实很清晰：能源、安全、供应链、国家能力。</p>
+      </aside>
+    </section>
+
+    <section class="stats rise" style="animation-delay: 180ms;">
+      <article class="stat-card">
+        <div class="stat-label">原油价格</div>
+        <div class="stat-value">$100 / 桶</div>
+        <div class="stat-desc">伊朗战争继续推升能源风险溢价，全球股市同步承压。</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-label">伊朗学校空袭</div>
+        <div class="stat-value">165+ 死亡</div>
+        <div class="stat-desc">AP 报道称，美方初步调查指向“过时情报”导致误击。</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-label">乌克兰战场</div>
+        <div class="stat-value">57,000+</div>
+        <div class="stat-desc">乌方称俄军累计发射超过 5.7 万架 Shahed 无人机。</div>
+      </article>
+      <article class="stat-card">
+        <div class="stat-label">中国增长目标</div>
+        <div class="stat-value">4.5% - 5%</div>
+        <div class="stat-desc">北京继续押注 AI、机器人与长期产业竞争力。</div>
+      </article>
+    </section>
+
+    <section class="section-head rise" style="animation-delay: 240ms;">
+      <div>
+        <h2>六条主线</h2>
+      </div>
+      <p>下面不是简单摘抄，而是把“发生了什么”和“为什么重要”揉在一起，方便你快速形成今天的世界图景。</p>
+    </section>
+
+    <section class="stories">
+      <article class="story-card rise" style="--accent-color: var(--coral); animation-delay: 280ms;">
+        <div class="story-meta">
+          <span class="region">中东 / 战争升级</span>
+          <span class="timing">3 月 12 日</span>
+        </div>
+        <h3>伊朗新最高领袖首次公开表态，称将继续打下去</h3>
+        <p>AP 报道称，伊朗新最高领袖莫杰塔巴·哈梅内伊在周四首次公开发声，表示将继续战斗，并威胁对海湾阿拉伯国家施加更多压力，还暗示可能开启“其他战线”。</p>
+        <div class="impact">这意味着局势短期内很难自然降温。战争风险已经不再局限于伊朗和以色列本身，而是在把能源通道、地区盟友与国际航运一并卷入。</div>
+        <div class="story-footer">
+          <span class="tag">看点：霍尔木兹海峡与地区外溢风险</span>
+          <a class="source-link" href="https://apnews.com/article/iran-israel-us-march-12-2026-oil-prices-90e17dbf7354d1e9428994ab2a036506" target="_blank" rel="noreferrer">查看来源</a>
+        </div>
+      </article>
+
+      <article class="story-card rise" style="--accent-color: var(--gold); animation-delay: 340ms;">
+        <div class="story-meta">
+          <span class="region">中东 / 人道争议</span>
+          <span class="timing">3 月 12 日</span>
+        </div>
+        <h3>美方初步调查：袭击伊朗小学可能源于过时情报</h3>
+        <p>据 AP 引述美国官员和知情人士，导致伊朗一所小学被击中的导弹袭击，初步调查指向过时坐标信息。报道称这次打击造成 165 人以上死亡，其中许多是儿童。</p>
+        <div class="impact">这条新闻会持续发酵，因为它触及战争合法性、盟友舆论和美国国内追责。若结论坐实，这将成为本轮冲突里最具破坏力的政治事件之一。</div>
+        <div class="story-footer">
+          <span class="tag">看点：情报链失误与战争责任</span>
+          <a class="source-link" href="https://apnews.com/article/iran-us-school-hegseth-trump-2ffff06808f7a584b0a03831897ab0b8" target="_blank" rel="noreferrer">查看来源</a>
+        </div>
+      </article>
+
+      <article class="story-card rise" style="--accent-color: var(--teal); animation-delay: 400ms;">
+        <div class="story-meta">
+          <span class="region">全球市场 / 能源</span>
+          <span class="timing">3 月 12 日</span>
+        </div>
+        <h3>油价重返 100 美元，全球股市同步承压</h3>
+        <p>AP 报道显示，随着伊朗战争看不到明确终点，国际油价在周四重新站上每桶 100 美元，全球风险资产普遍回落，美股三大指数当天也显著走低。</p>
+        <div class="impact">这说明战争已经从军事新闻变成宏观经济新闻。能源价格一旦维持高位，后续会继续挤压通胀、消费和企业利润，影响远不止中东地区。</div>
+        <div class="story-footer">
+          <span class="tag">看点：能源成本重新定价</span>
+          <a class="source-link" href="https://apnews.com/article/oil-stocks-markets-iran-crude-trump-45f78a8cfe9a5c7e1a2279150a2f90f1" target="_blank" rel="noreferrer">查看来源</a>
+        </div>
+      </article>
+
+      <article class="story-card rise" style="--accent-color: var(--blue); animation-delay: 460ms;">
+        <div class="story-meta">
+          <span class="region">欧洲 / 乌克兰</span>
+          <span class="timing">3 月 12 日</span>
+        </div>
+        <h3>乌克兰等待美国批准大型无人机联合生产协议</h3>
+        <p>泽连斯基表示，乌克兰正在等待白宫批准一项重大无人机与防空联合生产协议。乌方称，伊朗战争让各国更直观地看到，低成本无人机群正在重塑现代防空逻辑。</p>
+        <div class="impact">这不只是军工合作，更是战争经验的快速输出。谁能更便宜地拦截大规模无人机，谁就在下一阶段冲突里占据明显优势。</div>
+        <div class="story-footer">
+          <span class="tag">看点：低成本防空与军工协作</span>
+          <a class="source-link" href="https://apnews.com/article/russia-ukraine-war-drones-iran-oil-a0204c7973df02715a3990fcdc666db4" target="_blank" rel="noreferrer">查看来源</a>
+        </div>
+      </article>
+
+      <article class="story-card rise" style="--accent-color: #8fd17d; animation-delay: 520ms;">
+        <div class="story-meta">
+          <span class="region">东亚 / 中国</span>
+          <span class="timing">3 月 12 日</span>
+        </div>
+        <h3>中国在两会闭幕日继续强调“稳定”与科技优先</h3>
+        <p>AP 报道指出，北京在全国人大闭幕后继续把五年规划的重心放在 AI、机器人等关键技术上，同时设定 2026 年 4.5% 到 5% 的增长目标，展现长期竞争取向。</p>
+        <div class="impact">当外部世界被战争牵着走时，中国今天释放的信号很清楚：短期波动可以看，长期技术能力才是硬底盘。这会继续影响中美竞争和全球产业链布局。</div>
+        <div class="story-footer">
+          <span class="tag">看点：技术主权与长期规划</span>
+          <a class="source-link" href="https://apnews.com/article/china-congress-legislature-closing-five-year-plan-d754b321c4235f619c998e9b4d03f130" target="_blank" rel="noreferrer">查看来源</a>
+        </div>
+      </article>
+
+      <article class="story-card rise" style="--accent-color: #ffb3c1; animation-delay: 580ms;">
+        <div class="story-meta">
+          <span class="region">拉美 / 政治转向</span>
+          <span class="timing">3 月 11 日延续发酵</span>
+        </div>
+        <h3>智利新总统卡斯特就职，国家明显右转</h3>
+        <p>智利新总统何塞·安东尼奥·卡斯特正式就职。AP 形容，这代表智利自 1990 年重返民主以来最明显的一次右转，而他的核心议题是治安与非法移民。</p>
+        <div class="impact">这条线索值得留意，因为它反映的不是智利单点新闻，而是拉美更广泛的政治摆动。地区政策、对美关系以及对华姿态都可能进一步改变。</div>
+        <div class="story-footer">
+          <span class="tag">看点：拉美右转与地缘再平衡</span>
+          <a class="source-link" href="https://apnews.com/article/chile-kast-inauguration-new-administration-00d398c96e0ff25378838dc8831dcbe8" target="_blank" rel="noreferrer">查看来源</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="section-head rise" style="animation-delay: 640ms;">
+      <div>
+        <h2>原始来源</h2>
+      </div>
+      <p>本页内容基于 2026 年 3 月 12 日前后当日报道整理，摘要为中文转述，具体细节请以原文为准。</p>
+    </section>
+
+    <section class="sources">
+      <a class="source-card rise" style="animation-delay: 700ms;" href="https://apnews.com/article/iran-israel-us-march-12-2026-oil-prices-90e17dbf7354d1e9428994ab2a036506" target="_blank" rel="noreferrer">
+        <div>
+          <strong>Iran's supreme leader promises to keep up attacks</strong>
+          <span>AP News | 中东战争升级、霍尔木兹海峡、海湾国家风险</span>
+        </div>
+        <span>打开原文</span>
+      </a>
+      <a class="source-card rise" style="animation-delay: 760ms;" href="https://apnews.com/article/iran-us-school-hegseth-trump-2ffff06808f7a584b0a03831897ab0b8" target="_blank" rel="noreferrer">
+        <div>
+          <strong>US likely struck Iranian school by mistake. Senators demand answers</strong>
+          <span>AP News | 误击小学、过时情报、战争调查</span>
+        </div>
+        <span>打开原文</span>
+      </a>
+      <a class="source-card rise" style="animation-delay: 820ms;" href="https://apnews.com/article/oil-stocks-markets-iran-crude-trump-45f78a8cfe9a5c7e1a2279150a2f90f1" target="_blank" rel="noreferrer">
+        <div>
+          <strong>Oil jumps to $100 per barrel and stocks sink worldwide</strong>
+          <span>AP News | 油价与全球股市联动</span>
+        </div>
+        <span>打开原文</span>
+      </a>
+      <a class="source-card rise" style="animation-delay: 880ms;" href="https://apnews.com/article/russia-ukraine-war-drones-iran-oil-a0204c7973df02715a3990fcdc666db4" target="_blank" rel="noreferrer">
+        <div>
+          <strong>Ukraine awaits US approval for drone production deal</strong>
+          <span>AP News | 乌克兰无人机、防空成本、白宫审批</span>
+        </div>
+        <span>打开原文</span>
+      </a>
+      <a class="source-card rise" style="animation-delay: 940ms;" href="https://apnews.com/article/china-congress-legislature-closing-five-year-plan-d754b321c4235f619c998e9b4d03f130" target="_blank" rel="noreferrer">
+        <div>
+          <strong>China projects itself as a force for stability in an unstable world</strong>
+          <span>AP News | 中国两会、五年规划、AI 与机器人</span>
+        </div>
+        <span>打开原文</span>
+      </a>
+      <a class="source-card rise" style="animation-delay: 1000ms;" href="https://apnews.com/article/chile-kast-inauguration-new-administration-00d398c96e0ff25378838dc8831dcbe8" target="_blank" rel="noreferrer">
+        <div>
+          <strong>Kast takes office in Chile</strong>
+          <span>AP News | 智利新政府、拉美右转</span>
+        </div>
+        <span>打开原文</span>
+      </a>
+    </section>
+
+    <footer class="rise" style="animation-delay: 1060ms;">
+      本页为人工整理的世界新闻速览，不代表完整报道。<br>
+      站点文件适合直接部署到 GitHub Pages。
+    </footer>
+  </main>
+</body>
+</html>
