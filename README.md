@@ -1,6 +1,6 @@
 # Today World News
 
-A static one-page site for the major world headlines of March 12, 2026.
+A static one-page site for the major world headlines of March 14, 2026.
 
 ## Files
 
@@ -8,8 +8,10 @@ A static one-page site for the major world headlines of March 12, 2026.
 
 ## Sources
 
-- Associated Press reporting published on or around March 12, 2026
+- Associated Press reporting published between March 12 and March 14, 2026
 
 ## Deployment
 
 This repo is intended to be published directly from the `main` branch root via GitHub Pages.
+
+Expected site URL: `https://landozhao.github.io/today-world-news/`
